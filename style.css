@@ -1,0 +1,36 @@
+h1 {
+    color: gold;
+    background-color: blue;
+    text-align: center;
+}
+h2 {
+    color: green;
+    background-color: cadetblue;
+    text-align: center;
+}
+#one {
+color:brown;
+background-color: cornflowerblue;
+}
+div {
+    background:linear-gradient(to right, blue,red,green);
+}
+h4 {
+    color:fuchsia
+}
+
+p {
+    color:darkgoldenrod;
+}
+p:hover {
+    color:black;
+    background-color: lawngreen;
+}
+pre {
+    color:orangered;
+    border: 3px solid pink;
+    border-radius: 20px;
+}
+pre:hover {
+    background-color: aliceblue;
+}
