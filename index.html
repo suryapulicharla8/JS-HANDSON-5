@@ -54,7 +54,26 @@
     <br>
     <h4>2. Count the Heads ?</h4>
     <p>Tina is given a string  S which contains the first letter of all the student names in her class. She got a curiosity to check how many people have their names starting from the same alphabet. So given a string  S , she decided to write a code that finds out the count of characters that occur more than once in the string.</p>
-    <pre></pre>
+                    <pre>var Count_Occ = (s) => 
+                    {
+                    let arr=s.split("").sort();
+                    let heads="";
+                    let visit=[];
+                    let k=0;
+                    let res="";
+                    for(let i=0;i < arr.length;i++){
+                      let count=0;
+                      for(let j=0;j < arr.length;j++){
+                        if(arr[i]===arr[j]){
+                          heads=arr[i];
+                          count++;
+                        }
+                      }
+                      if(!visit.includes(heads) && count>=2){
+                        visit[k]=heads;
+                        visit[k+1]=count;
+                        k=k+2;
+                      }</pre>
     <br>
     <h4>3.Count the Vowels ?</h4>
     <p>You are given a string 
@@ -142,7 +161,12 @@
          and 
         P
         , and your task is to concatenate them and return the concatenated string.</p>
-    <pre></pre>
+      <pre>const joinStrings = (S, P) => 
+      {
+       return (S+P);  
+      };
+       
+      </pre>
     <br>
     <h4>8.Plaindrome Check ?</h4>
     <p>You are given a string 
@@ -174,14 +198,34 @@
          is a string, which turnout same when read in reverse direction.
         Example: "naman" is a Palindrome.
         String can contain both upppercase lowercase letters.</p>
-    <pre></pre>
+      <pre>var Palin_Check = (str) =>
+      {
+        let reverseStr=""
+        for(let i=str.length-1;i>=0;i--){
+          reverseStr+=str[i];
+        }
+        if(reverseStr===str)
+        return "True";
+        else
+        return "False";
+      };
+      </pre>
     <br>
     <h4>9.Reverse the String ? </h4>
     <p>You are given a string 
         S
         , Your task is to Reverse the string.
         String can contain both upppercase lowercase letters.</p>
-    <pre></pre>
+        <pre>var Reverse_String = (str) => 
+        {
+          var reverseStr="";
+          for(let i=str.length-1;i>=0;i--){
+            reverseStr+=str[i];
+          }
+          return reverseStr;
+        };
+         
+        </pre>
     <br>
     <h4>10.Match the Strings ?</h4>
     <p>You are given two strings 
@@ -198,7 +242,16 @@
         N
         O
         .</p>
-    <pre></pre>
+      <pre>var String_Match = (S1,S2) => 
+      {
+        for(let i=0;i < S1.length;i++){
+          if(S1[i]!==S2[i]){
+            return "NO"
+          }
+        } 
+        return "YES"
+      };
+       </pre>
     <br>
     <h4>11.String Replace ?</h4>
     <p>You are given a string 
@@ -207,7 +260,12 @@
         You need to repalce the pattern string in 
         S
          to the text string.</p>
-    <pre></pre>
+      <pre>var Replace = (S, pattern , text) => 
+      {
+       let newS=S.replace(pattern,text)
+       return newS;
+      };
+       </pre>
     <br>
     <h4>12.Split the String ?</h4>
     <p>You are given a string 
